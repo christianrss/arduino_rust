@@ -1,0 +1,15 @@
+[package]
+name = "arduino_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+panic-halt = "1.0.0"
+
+[dependencies.arduino-hal]
+git = "https://github.com/Rahix/avr-hal"
+rev = "d827cdd"
+features = ["arduino-uno"]
+
+[profile.release]
+panic = "abort"
